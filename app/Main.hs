@@ -107,12 +107,13 @@ solvers =
       ((1, 2), Day1.solvePart2),
       ((2, 1), Day2.solvePart1),
       ((2, 2), Day2.solvePart2),
-      ((3, 1), Day3.solvePart1)
+      ((3, 1), Day3.solvePart1),
+      ((3, 2), Day3.solvePart2)
     ]
 
 main :: IO ()
 main = do
-  inputs <- readPuzzleInputs [(1, 1), (1, 2), (2, 1), (2, 2), (3, 1)]
+  inputs <- readPuzzleInputs [(1, 1), (1, 2), (2, 1), (2, 2), (3, 1), (3, 2)]
   solutions <- solve inputs solvers
 
   putTextLn "================================="
