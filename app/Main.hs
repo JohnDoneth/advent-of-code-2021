@@ -8,6 +8,7 @@ import Data.Text (Text, append)
 import qualified Data.Text as T
 import qualified Day1
 import qualified Day2
+import qualified Day3
 import Lib
 import System.Clock
 import System.Console.Pretty
@@ -105,12 +106,13 @@ solvers =
     [ ((1, 1), Day1.solvePart1),
       ((1, 2), Day1.solvePart2),
       ((2, 1), Day2.solvePart1),
-      ((2, 2), Day2.solvePart2)
+      ((2, 2), Day2.solvePart2),
+      ((3, 1), Day3.solvePart1)
     ]
 
 main :: IO ()
 main = do
-  inputs <- readPuzzleInputs [(1, 1), (1, 2), (2, 1), (2, 2)]
+  inputs <- readPuzzleInputs [(1, 1), (1, 2), (2, 1), (2, 2), (3, 1)]
   solutions <- solve inputs solvers
 
   putTextLn "================================="

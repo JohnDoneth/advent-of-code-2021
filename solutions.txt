@@ -5,3 +5,6 @@ day1
 day2
     part1 1654760
     part2 1956047400
+
+day3
+    part1 3901196
