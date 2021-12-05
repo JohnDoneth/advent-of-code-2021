@@ -1,0 +1,7 @@
+day1
+    part1 1711
+    part2 1743
+
+day2
+    part1 1654760
+    part2 1956047400
