@@ -20,18 +20,6 @@ import Prelude hiding (Down)
 
 type Parser = Parsec Void Text
 
-sc :: Parser ()
-sc = void $ Prelude.some (char ' ' <|> char '\t' <|> char '\n')
-
-lexeme :: Parser a -> Parser a
-lexeme = L.lexeme sc
-
-integer :: Parser Int
-integer = lexeme L.decimal
-
-symbol :: Text -> Parser Text
-symbol = lexeme . string
-
 parseBinaryDigit :: Parser Bool
 parseBinaryDigit = do
   x :: Char <- char '1' <|> char '0'
