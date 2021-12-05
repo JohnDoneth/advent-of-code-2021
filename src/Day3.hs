@@ -20,16 +20,6 @@ import Prelude hiding (Down)
 
 type Parser = Parsec Void Text
 
-newtype Epsilon = Epsilon Int -- LE
-
-newtype Gamma = Gamma Int -- BE
-
--- fromLittleEndian :: Text -> Int
--- fromLittleEndian = foldl' (\acc x -> acc * 2 + digitToInt x) 0
-
--- fromBigEndian :: Text -> Int
--- fromBigEndian = foldr (\x acc -> acc * 2 + digitToInt x) 0
-
 sc :: Parser ()
 sc = void $ Prelude.some (char ' ' <|> char '\t' <|> char '\n')
 
